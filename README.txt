@@ -3,9 +3,9 @@ You can find the following three items within this folder:
 #2. output folder
 #3. labeled_output folder
 
-========
+====================
 #1. wiki_input.tsv
-========
+====================
 The wiki_input.tsv contains 100K Wikipedia table columns that we randomly sampled from a recent crawl of Wikipedia tables (note that since Wikipedia pages are constantly being updated, the tables we crawled may not always match the most recent version available online). We ran different error detection algorithms using this data set to produce top-1000 results for each method, and manually label predicted errors to assess result quality. 
 
 Each row in the file corresponds to an input Wikipedia table column. There are a total of 6 attributes in the file:
@@ -17,18 +17,18 @@ Each row in the file corresponds to an input Wikipedia table column. There are a
 	A6: values in the column, connected by "___"
 
 
-========
+====================
 #2. output
-========
+====================
 The output folder contains output files for 11 methods compared in the Auto-Detect paper. Each file is named as "wiki_pooling_X.tsv", where X is the name of the method.
 
 Each file contains 8 attributes. The first 6 attributes are the same as the input file, and the last 2 attributes are:
 	A7: the pair of values in the comlumn regarded as the most incompatible
 	A8: an algorithm-specific compatibility score
 
-========
+====================
 #3. labeled_output
-========
+====================
 The labeled_output folder contains the sampled output files for 11 methods compared in the Auto-Detect paper. Each file is named as "wiki_pooling_X_Y_Z.tsv", where X is the name of the method compared, Y and Z denotes the range from which 100 predictions were sampled in top-1000 for manual labeling.
 For example, wiki_pooling_Auto-Detect_200_500.tsv contains 100 values sampled from top-200 to top-500 of Auto-Detect.
 
